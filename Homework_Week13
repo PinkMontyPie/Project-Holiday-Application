@@ -1,9 +1,4 @@
-part_pos = []
-full_pos = []
-fulltime_list = []
-parttime_list = []
-sum_fulltime = []
-sum_parttime = []
+part_pos,full_pos,fulltime_list,parttime_list,sum_fulltime,sum_parttime = [],[],[],[],[],[]
 def getdata():
     with open("profile.txt","r") as profile :
         data = profile.read().splitlines()
@@ -23,7 +18,6 @@ def getdata():
                 part_pos.append(item[0])
                 pos = part_pos.index(item[0])
                 parttime_list[pos].append(float(summary))
-print(parttime_list)
 def writedata2file():
     with open("parttime.txt","w") as parttime , open("fulltime.txt","w") as fulltime :
         parttime.write("%42s\n"%("SHOW INCOME EMPLOYEE PARTTIME"))
