@@ -1,0 +1,3 @@
+pip install tkcalendar
+pip install password-strength
+pip install tkvideoplayer
